@@ -46,12 +46,12 @@ Para o tratamento das imagens podem usar o OpenCV. Para o OpenCV já há alguns 
 
 ## Apontadores iniciais
 
-Canny edge detector
-Changing the contrast and brightness of an image
-Histogram Equalization
-Exemplo muito básico de utilização do Canny
-Grass com Canny
-River Detection in Remotely Sensed Imagery Using Gabor Filtering and Path Opening
+[Canny edge detector](https://en.wikipedia.org/wiki/Canny_edge_detector)
+[Changing the contrast and brightness of an image](https://docs.opencv.org/3.4.1/d3/dc1/tutorial_basic_linear_transform.html)
+[Histogram Equalization](https://docs.opencv.org/3.4.1/d4/d1b/tutorial_histogram_equalization.html)
+[Exemplo muito básico de utilização do Canny](https://docs.opencv.org/3.4.1/da/d5c/tutorial_canny_detector.html)
+[Grass com Canny](https://grass.osgeo.org/grass74/manuals/addons/i.edge.html)
+[River Detection in Remotely Sensed Imagery Using Gabor Filtering and Path Opening](http://www.mdpi.com/2072-4292/7/7/8779)
 
 # Entrega
 
