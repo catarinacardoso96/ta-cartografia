@@ -19,7 +19,7 @@ Os trabalhos podem ser feitos individualmente ou em grupo de dois.
 
 As imagens do Sentinel podem ser descarregadas a partir de: https://scihub.copernicus.eu/dhus/#/hom
 
-Nos filtros, devem-se indicar os critérios de pesquisas. Deve-se preferir imagens com uma baixa taxa de nuvens. 
+Nos filtros, devem-se indicar os critérios de pesquisas. Deve-se preferir imagens com uma baixa taxa de nuvens.
 
 Imagem para teste (Noroeste de Portugal)
 
@@ -53,10 +53,16 @@ Para o tratamento das imagens podem usar o OpenCV. Para o OpenCV já há alguns 
 [Grass com Canny](https://grass.osgeo.org/grass74/manuals/addons/i.edge.html)
 [River Detection in Remotely Sensed Imagery Using Gabor Filtering and Path Opening](http://www.mdpi.com/2072-4292/7/7/8779)
 
-# Entrega
+## Implementação
 
-Link para um repositório Github público com o código
+Esta implementação segue o seguinte método:
+- melhoria do contraste/brilho da imagem; desta forma conseguiu-se realçar a forma das estradas que ficaram mais salientes
+- cálculo da distância da cor de cada pixel à cor média das estradas que foi assumida como (186, 172, 171 - BGR); esta cor foi selecionada depois de alguns testes manuais e não automatizados.
+- binarização da imagem por truncação e por threshold; ambos os métodos foram encontrados na documentação do OpenCV.
+- seleção na imagem original dos pixeis a brancos na binarizada.
 
-Imagens de teste e resultados no Github
+## Desafios
 
-Não é preciso relatório. Em vez do relatório, será avaliado o Readme.md que estiver no repositório do Github.
+Durante o desenvolvimento, encontraram-se alguns desafios que poderão ser considerados como trabalho futuro. Eram estes:
+- a resolução da imagem utilizada era um pouco baixa, pelo que ao fazer zoom perdiam-se muitos detalhes importantes para a segmentação. A utilização de um algoritmo como o Canny tornou-se impossibilitada pois o algoritmo detetava demasiadas linhas e não foi possível extrair a informação importante.
+- o tamanho das imagens causava erros de memória no processo de segmentação; poderia-se desenvolver um programa que permiti-se ao utilizador recortar apenas a parte que lhe interessa ou navegar pela imagem grande enquanto a segmentação era feita em "real-time"
